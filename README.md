@@ -1,0 +1,1 @@
+# spring-select-specific-columns-using-jpa
