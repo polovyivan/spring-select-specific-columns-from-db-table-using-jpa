@@ -1,6 +1,6 @@
-package com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa.dto;
+package com.polovyi.ivan.tutorial.dto;
 
-import com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa.entity.CustomerEntity;
+import com.polovyi.ivan.tutorial.entity.CustomerEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

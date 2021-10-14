@@ -1,10 +1,10 @@
-package com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa.service;
+package com.polovyi.ivan.tutorial.service;
 
-import com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa.dto.CustomerJobResponse;
-import com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa.dto.CustomerMailingAddressResponse;
-import com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa.dto.CustomerResponse;
-import com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa.dto.CustomerPhoneNumberResponse;
-import com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa.repository.CustomerRepository;
+import com.polovyi.ivan.tutorial.dto.CustomerJobResponse;
+import com.polovyi.ivan.tutorial.dto.CustomerMailingAddressResponse;
+import com.polovyi.ivan.tutorial.dto.CustomerResponse;
+import com.polovyi.ivan.tutorial.dto.CustomerPhoneNumberResponse;
+import com.polovyi.ivan.tutorial.repository.CustomerRepository;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.stereotype.Service;
@@ -33,8 +33,8 @@ public record CustomerService(CustomerRepository customerRepository) {
                 .collect(Collectors.toList());
     }
 
-    public List<CustomerJobResponse> getAllJobs() {
-        log.info("Getting all jobs..");
+    public List<CustomerJobResponse> findAllJobs() {
+        log.info("Getting all jobs...");
         return customerRepository.findAllJobs().stream().map(CustomerJobResponse::valueOf).collect(Collectors.toList());
     }
 }

@@ -1,9 +1,9 @@
-package com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa.configuration;
+package com.polovyi.ivan.tutorial.configuration;
 
 
 import com.github.javafaker.Faker;
-import com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa.entity.CustomerEntity;
-import com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa.repository.CustomerRepository;
+import com.polovyi.ivan.tutorial.entity.CustomerEntity;
+import com.polovyi.ivan.tutorial.repository.CustomerRepository;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
@@ -28,7 +28,7 @@ public record DataLoader(CustomerRepository customerRepository) {
 
     private List<CustomerEntity> generateCustomerList() {
         Faker faker = new Faker();
-        return IntStream.range(0, 1000)
+        return IntStream.range(0, 5)
                 .mapToObj(i -> CustomerEntity.builder().createdAt(
                         LocalDate.now().minus(Period.ofDays((new Random().nextInt(365 * 10)))))
                         .fullName(faker.name().fullName())

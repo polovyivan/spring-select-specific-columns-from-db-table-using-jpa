@@ -1,4 +1,4 @@
-package com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa.entity.dto;
+package com.polovyi.ivan.tutorial.entity.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

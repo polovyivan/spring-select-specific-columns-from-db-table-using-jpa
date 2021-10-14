@@ -1,10 +1,10 @@
-package com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa.controller;
+package com.polovyi.ivan.tutorial.controller;
 
-import com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa.dto.CustomerJobResponse;
-import com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa.dto.CustomerMailingAddressResponse;
-import com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa.dto.CustomerResponse;
-import com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa.dto.CustomerPhoneNumberResponse;
-import com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa.service.CustomerService;
+import com.polovyi.ivan.tutorial.dto.CustomerJobResponse;
+import com.polovyi.ivan.tutorial.dto.CustomerMailingAddressResponse;
+import com.polovyi.ivan.tutorial.dto.CustomerResponse;
+import com.polovyi.ivan.tutorial.dto.CustomerPhoneNumberResponse;
+import com.polovyi.ivan.tutorial.service.CustomerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,8 +37,8 @@ public record CustomerController(CustomerService customerService) {
 
     @GetMapping(path = "/jobs")
     @ResponseStatus(HttpStatus.OK)
-    public List<CustomerJobResponse> getAllJobs() {
-        return customerService.getAllJobs();
+    public List<CustomerJobResponse> findAllCustomersAndJobs() {
+        return customerService.findAllJobs();
     }
 
 }

@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.polovyi.ivan.spring-select-specific-columns-from-db-table-using-jpa' is invalid and this project uses 'com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa' instead.
+* The original package name 'com.polovyi.ivan.spring-select-specific-columns-from-db-table-using-jpa' is invalid and this project uses 'com.polovyi.ivan.tutorial' instead.
 
 # Getting Started
 

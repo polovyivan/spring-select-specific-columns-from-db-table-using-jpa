@@ -1,4 +1,4 @@
-package com.polovyi.ivan.springselectspecificcolumnsfromdbtableusingjpa;
+package com.polovyi.ivan.tutorial;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
